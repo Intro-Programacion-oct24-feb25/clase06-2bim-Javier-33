@@ -27,16 +27,17 @@ public class Ejemplo092 {
 
                 if (vocal == 'a' || vocal == 'e' || vocal == 'i' || vocal == 'o'
                         || vocal == 'u') {
-                    bandera = true;
-                } else {
-                    throw new Exception(pais);
-
+                    
+                    throw new Exception("Debe ingresar un pais que inicie con"
+                            + "consonante");
                 }
+                bandera = false;
 
             } catch (Exception e) {
                 System.out.printf("Ocurrió una excepción %s\n", e);
-                bandera = false;
+                
             }
+            System.out.printf("%s/n", pais);
         }
     }
 }
