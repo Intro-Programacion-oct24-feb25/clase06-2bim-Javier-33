@@ -28,6 +28,10 @@ public class Ejemplo051 {
 
                 System.out.printf("Resultado %d\n", resultado);
                 bandera = false;
+                //Mientras exista un error jamas pasara bandera a ser false y
+                //seguiria en el ciclo, en cambio si la operacion no tiene ningun
+                //error, bandera pasaria por el print y cambiaria a false,
+                //y el ciclo acabaria
             } catch (InputMismatchException inputMismatchException) {
 
                 System.out.printf("Existe un error de tipo %s\n",
