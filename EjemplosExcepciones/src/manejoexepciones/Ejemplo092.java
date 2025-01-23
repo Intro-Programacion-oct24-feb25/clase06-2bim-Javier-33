@@ -17,6 +17,7 @@ public class Ejemplo092 {
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
         boolean bandera = true;
+        String cadena = "";
         while (bandera) {
 
             try {
@@ -27,17 +28,23 @@ public class Ejemplo092 {
 
                 if (vocal == 'a' || vocal == 'e' || vocal == 'i' || vocal == 'o'
                         || vocal == 'u') {
-                    
+                    bandera = true;
                     throw new Exception("Debe ingresar un pais que inicie con"
-                            + "consonante");
+                            + "consonante\n");
+                    
+  
+                }else{
+                    cadena = pais;
+                    bandera = false;
+                    
+                    
                 }
-                bandera = false;
 
             } catch (Exception e) {
                 System.out.printf("Ocurrió una excepción %s\n", e);
                 
             }
-            System.out.printf("%s/n", pais);
+            System.out.printf("%s\n", cadena);
         }
     }
 }
